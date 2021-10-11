@@ -1,8 +1,25 @@
 # Lab HMMER
 
-[HMMER](http://hmmer.org/) implements methods using probailistic models (profile Hidden Markov Models, HMMs) to search sequence databases for sequence homologs. HMMER is designed to detect remote homologs as sensitively as possible, relying on the strength of its underlying probability models. HMMER can also work with query sequences, not just profiles, just like BLAST.
+[HMMER](http://hmmer.org/) implements methods using probalistic models (profile Hidden Markov Models, HMMs) to search sequence databases for sequence homologs. HMMER is designed to detect remote homologs as sensitively as possible, relying on the strength of its underlying probability models. HMMER can also work with query sequences, not just profiles, just like BLAST.
 
-HMMER can be run [interactively](https://www.ebi.ac.uk/Tools/hmmer/) or through the command line
+HMMER can be run [interactively](https://www.ebi.ac.uk/Tools/hmmer/) or through the command line.
+
+- The programs `hmmbuild`, `hmmsearch`, `hmmscan`, and `hmmalign` are the core functionality for protein domain analysis and annotation pipelines, for instance using profile databases like Pfam.
+
+  **`hmmbuild`** builds profile from input multiple alignment
+
+  **`hmmalign`** makes multiple sequence alignment using a profile
+  
+  **`hmmsearch`** searches profile against sequence database
+  
+  **`hmmscan`** searches sequence against profile database
+
+- `phmmer` and `jackhmmer` search a single protein sequence against a protein sequence database, akin to BLASTP and PSI-BLAST.(Internally, they just produce a profile from the query sequence, then
+run profile searches.)
+
+- `nhmmer` is the equivalent of `hmmsearch` and `phmmer`, but is capable ofsearching long, chromosome-size target DNA sequences. `nhmmscan` is the equivalent of hmmscan, capable of using chromosome-size DNA
+sequences as a query into a profile database.
+
 
 ## Set up conda environment
 ```
@@ -10,3 +27,7 @@ conda create -n hmmer
 conda activate hmmer
 conda install -c bioconda hmmer
 ```
+
+
+
+For today's short exercise, we will search 
