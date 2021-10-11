@@ -31,10 +31,14 @@ conda install -c bioconda hmmer
 ```
 
 ## Create an HMM profile from an alignement
-```hmmbuild nitrogenase.hmm nitrogenase.aln```
+```
+hmmbuild nitrogenase.hmm nitrogenase.aln
+```
 
 ## Perform search 
-```hmmsearch -o SPO-all-DCM-0.8-5.00_nitrogenase.out nitrogenase.aln /vortexfs1/omics/env-bio/collaboration/sequences/hmmer_example/```
+```
+hmmsearch -o SPO-all-DCM-0.8-5.00_nitrogenase.out nitrogenase.aln /vortexfs1/omics/env-bio/collaboration/sequences/hmmer_example/SPO-all-DCM-0.8-5.00.proteins.faa
+```
 
 Check out the output files
 
