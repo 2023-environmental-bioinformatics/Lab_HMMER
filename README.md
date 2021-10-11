@@ -23,23 +23,24 @@ sequences as a query into a profile database.
 For today's short exercise, we will search a manually constructed database located in `/vortexfs1/omics/env-bio/collaboration/sequences/hmmer_example/`. The database `SPO-all-DCM-0.8-5.00.proteins.faa` consist of all genes from the Tara Ocean metagenomes corresponding to the deep chlorophyl maximum samples from the Southern Pacific Ocean, 0.8 - 5.00um fraction. We want to detect the nitrogenase iron protein (nifH) gene.
 
 
-## Set up conda environment
+### Set up conda environment
 ```
 conda create -n hmmer
 conda activate hmmer
 conda install -c bioconda hmmer
 ```
 
-## Create an HMM profile from an alignement
+### Create an HMM profile from an alignement
 ```
 hmmbuild nitrogenase.hmm nitrogenase.aln
 ```
 
-## Perform search 
+### Perform search 
 ```
 hmmsearch -o SPO-all-DCM-0.8-5.00_nitrogenase.out nitrogenase.aln /vortexfs1/omics/env-bio/collaboration/sequences/hmmer_example/SPO-all-DCM-0.8-5.00.proteins.faa
 ```
 
-Check out the output files
+
+### Check out the output files!
 
 
