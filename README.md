@@ -20,6 +20,8 @@ run profile searches.)
 - `nhmmer` is the equivalent of `hmmsearch` and `phmmer`, but is capable ofsearching long, chromosome-size target DNA sequences. `nhmmscan` is the equivalent of hmmscan, capable of using chromosome-size DNA
 sequences as a query into a profile database.
 
+For today's short exercise, we will search a manually constructed database located in `/vortexfs1/omics/env-bio/collaboration/sequences/hmmer_example/`. The database `SPO-all-DCM-0.8-5.00.proteins.faa` consist of all genes from the Tara Ocean metagenomes corresponding to the deep chlorophyl maximum samples from the Southern Pacific Ocean, 0.8 - 5.00um fraction.
+
 
 ## Set up conda environment
 ```
@@ -28,6 +30,6 @@ conda activate hmmer
 conda install -c bioconda hmmer
 ```
 
+## Create an HMM profile from an alignement
 
 
-For today's short exercise, we will search 
