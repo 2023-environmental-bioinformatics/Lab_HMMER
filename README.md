@@ -2,7 +2,7 @@
 
 [HMMER](http://hmmer.org/) implements methods using probalistic models (profile Hidden Markov Models, HMMs) to search sequence databases for sequence homologs. HMMER is designed to detect remote homologs as sensitively as possible, relying on the strength of its underlying probability models. HMMER can also work with query sequences, not just profiles, just like BLAST.
 
-HMMER can be run [interactively](https://www.ebi.ac.uk/Tools/hmmer/) or through the command line.
+HMMER can be run [interactively](https://www.ebi.ac.uk/Tools/hmmer/) or through the command line. The complete manual of the software can be found [here](http://eddylab.org/software/hmmer/Userguide.pdf). Briefly:
 
 - The programs `hmmbuild`, `hmmsearch`, `hmmscan`, and `hmmalign` are the core functionality for protein domain analysis and annotation pipelines, for instance using profile databases like Pfam.
 
