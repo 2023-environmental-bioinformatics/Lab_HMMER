@@ -45,6 +45,5 @@ hmmsearch -o SPO-all-DCM-0.8-5.00_nitrogenase.out nitrogenase.hmm /vortexfs1/omi
 ```
 
 
-### Check out the output files!
-
-
+### Check out the output file!
+*Is it easy to parse out the information you need (e.g. the number of hits)? If not, check the help menu and modify the command to save the parseable table of per-sequence hits to file, the multiple alignment of all hits to another file, and adjust the e-value to be more strigent. We typically use e-3 but in case of nitrogenases e-40 needs to be used due to functional similarity of this protein to other proteins)*
