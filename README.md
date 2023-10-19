@@ -41,7 +41,7 @@ hmmbuild nitrogenase.hmm nitrogenase.aln
 
 ### Perform search 
 ```
-hmmsearch -o SPO-all-DCM-0.8-5.00_nitrogenase.out nitrogenase.aln /vortexfs1/omics/env-bio/collaboration/sequences/hmmer_example/SPO-all-DCM-0.8-5.00.proteins.faa
+hmmsearch -o SPO-all-DCM-0.8-5.00_nitrogenase.out nitrogenase.hmm /vortexfs1/omics/env-bio/collaboration/sequences/hmmer_example/SPO-all-DCM-0.8-5.00.proteins.faa
 ```
 
 
