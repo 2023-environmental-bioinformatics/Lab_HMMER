@@ -4,7 +4,7 @@
 
 HMMER can be run [interactively](https://www.ebi.ac.uk/Tools/hmmer/) or through the command line. The complete manual of the software can be found [here](http://eddylab.org/software/hmmer/Userguide.pdf). Briefly:
 
-- The programs `hmmbuild`, `hmmsearch`, `hmmscan`, and `hmmalign` are the core functionality for protein domain analysis and annotation pipelines, for instance using profile databases like Pfam.
+- The programs `hmmbuild`, `hmmsearch`, `hmmscan`, and `hmmalign` are the core functionality for protein domain analysis and annotation pipelines, for instance using profile databases like Pfam (now incorporated in [Interpro](https://www.ebi.ac.uk/interpro/)).
 
   **`hmmbuild`** builds profile from input multiple alignment
 
@@ -14,23 +14,27 @@ HMMER can be run [interactively](https://www.ebi.ac.uk/Tools/hmmer/) or through 
   
   **`hmmscan`** searches sequence against profile database
 
-- `phmmer` and `jackhmmer` search a single protein sequence against a protein sequence database, akin to BLASTP and PSI-BLAST.(Internally, they just produce a profile from the query sequence, then
-run profile searches.)
+- `phmmer` and `jackhmmer` search a single protein sequence against a protein sequence database, akin to BLASTP and PSI-BLAST.(Internally, they just produce a profile from the query sequence, then run profile searches.)
 
-- `nhmmer` is the equivalent of `hmmsearch` and `phmmer`, but is capable ofsearching long, chromosome-size target DNA sequences. `nhmmscan` is the equivalent of hmmscan, capable of using chromosome-size DNA
-sequences as a query into a profile database.
+- `nhmmer` is the equivalent of `hmmsearch` and `phmmer`, but is capable of searching long, chromosome-size target DNA sequences. `nhmmscan` is the equivalent of hmmscan, capable of using chromosome-size DNA sequences as a query into a profile database.
 
 For today's short exercise, we will search a manually constructed database located in `/vortexfs1/omics/env-bio/collaboration/sequences/hmmer_example/`. The database `SPO-all-DCM-0.8-5.00.proteins.faa` consist of all genes from the Tara Ocean metagenomes corresponding to the deep chlorophyl maximum samples from the Southern Pacific Ocean, 0.8 - 5.00um fraction. We want to detect the nitrogenase iron protein (nifH) gene.
 
 
-### Set up conda environment
+### Set up the hmmer environment through mamba
+*start a tmux session and load your mamba environment*
 ```
-conda create -n hmmer
-conda activate hmmer
-conda install -c bioconda hmmer
+mamba create -n hmmer
+mamba activate hmmer
+mamba install -c bioconda hmmer
 ```
 
 ### Create an HMM profile from an alignement
+*navigate to your user directory inside the class folder and clone the current lab repo; use the srun node you started for the BLAST lab to run the commands or put in a similar request for resources*
+
+Activate you hmmer environment
+
+and create the profile using the alignment
 ```
 hmmbuild nitrogenase.hmm nitrogenase.aln
 ```
